@@ -1,16 +1,17 @@
 ## 主题切换/换肤（vue2）
 
-> 思路来源：https://ext.dcloud.net.cn/plugin?id=6215
+> 思路来源：[https://ext.dcloud.net.cn/plugin?id=6215](https://ext.dcloud.net.cn/plugin?id=6215)
+> 源码demo：[https://github.com/zqy233/uniapp-theme-switch](https://github.com/zqy233/uniapp-theme-switch)
 
 思路：
 
-1. 页面通过`style='--theme-color: #fff";'`这种写法，样式绑定var变量字符串，主题切换就更改变量值
-2. 全局var变量可以在page选择器中定义，但是没有找到动态修改page选择器中var变量的方法，所以最终只能每个页面都绑定var变量字符串，再基于`vuex`和`mixin`简化写法
+1. 原理：通过var变量的方式实现主题切换
+2. 全局var变量可以在page选择器中定义，但是没有找到动态修改page选择器中var变量的方法，所以最终只能每个页面都通过`style='--theme-color: #fff";'`这种写法绑定var变量字符串，再基于`vuex`和`mixin`简化写法
 3. 使用scss简化var变量写法（可选）
 4. 页面中使用scss变量或者var变量
 5. 原理示例：
 
-```vue
+```html
 <template>
   <view class="content" :style="style">
     <view @click="change">改变</view>
@@ -46,7 +47,7 @@ export default {
 
 ### 什么是var变量
 
-> https://juejin.cn/post/6937530846471520287
+> [https://juejin.cn/post/6937530846471520287](https://juejin.cn/post/6937530846471520287)
 
 ### 1.新建store/index.js
 
@@ -134,14 +135,14 @@ app.$mount()
 
 uni.scss加入代码
 
-```scss
+```css
 $nav-bg: var(--nav-bg);
 $nav-color: var(--nav-color);
 ```
 
 页面中使用var变量的写法
 
-```scss
+```css
 <style lang="scss">
 .btn {
   background-color: var(--nav-bg) !important;
@@ -152,7 +153,7 @@ $nav-color: var(--nav-color);
 
 页面中使用scss变量的写法
 
-```scss
+```css
 <style lang="scss">
 .btn {
   background-color: $nav-color !important;
@@ -163,7 +164,7 @@ $nav-color: var(--nav-color);
 
 ### 5.切换主题
 
-```vue
+```html
 <template>
   <view :style="theme" class="page">
     <button @click="setTheme('dark')" class="btn">黑夜</button>
@@ -236,4 +237,3 @@ page {
   filter: grayscale(100%);
 }
 ```
-
