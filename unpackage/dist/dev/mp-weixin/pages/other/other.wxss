@@ -1,0 +1,14 @@
+.page {
+  background-color: var(--nav-bg);
+  height: 100vh;
+}
+.center {
+  text-align: center;
+  color: pink;
+  padding: 10px;
+}
+.btn {
+  background-color: var(--nav-color) !important;
+  color: var(--nav-bg) !important;
+}
+

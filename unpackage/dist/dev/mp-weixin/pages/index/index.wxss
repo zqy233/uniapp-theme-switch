@@ -1,0 +1,9 @@
+.page {
+  background-color: var(--nav-bg);
+  height: 100vh;
+}
+.btn {
+  background-color: var(--nav-color) !important;
+  color: var(--nav-bg) !important;
+}
+

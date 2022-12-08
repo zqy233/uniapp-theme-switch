@@ -1,0 +1,1 @@
+<view class="page" style="{{(theme)}}"><view class="center">{{"当前主题"+themeName}}</view><button class="btn" type="default" data-event-opts="{{[['tap',[['back',['$event']]]]]}}" bindtap="__e">返回</button></view>
