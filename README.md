@@ -1,7 +1,10 @@
 ## 主题切换/换肤（vue2）
 
 > 思路来源：[https://ext.dcloud.net.cn/plugin?id=6215](https://ext.dcloud.net.cn/plugin?id=6215)
+
 > 源码demo：[https://github.com/zqy233/uniapp-theme-switch](https://github.com/zqy233/uniapp-theme-switch)
+
+> uniapp插件市场下载：[https://ext.dcloud.net.cn/plugin?id=10364](https://ext.dcloud.net.cn/plugin?id=10364)
 
 思路：
 
