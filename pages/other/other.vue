@@ -9,26 +9,20 @@
 export default {
   methods: {
     back() {
-      uni.navigateBack()
-    }
-  }
-}
+      uni.navigateBack();
+    },
+  },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page {
-  background-color: $nav-bg;
+  background-color: $theme-bg;
+  color: $theme-color;
   height: 100vh;
 }
-
 .center {
   text-align: center;
-  color: pink;
   padding: 10px;
-}
-
-.btn {
-  background-color: $nav-color !important;
-  color: $nav-bg !important;
 }
 </style>
